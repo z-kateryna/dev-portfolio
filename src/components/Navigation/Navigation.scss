@@ -4,16 +4,66 @@
 @use "../../assets/styles/partials/variables" as *;
 
 .nav {
+  padding: 1rem;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__logo {
     width: 2.5rem;
   }
 
+  &__links-container {
+    display: none;
+  }
+
+  &__icons-container {
+    display: none;
+  }
+
+  &__hamburger--container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $brand-green;
+    padding: 1rem;
+    display: none;
+    height: 90vh;
+
+    &.open {
+      display: block;
+    }
+  
+    &.closed {
+      display: none;
+    }
+  }
+
+  &__hamburger--item {
+    padding: 1rem;
+  }
+
+  &__hamburger__link {
+    color: $green-bkgrd;
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+
   @include desktop {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
     height: 80px;
-    
+
     &__wrapper {
-        width: 100%;
+      width: 100%;
       max-width: 1024px;
       display: flex;
       justify-content: space-between;
@@ -27,16 +77,20 @@
     }
 
     &__link {
-        color: $copy;
-        display: flex;
-        gap: 0.25rem;
-        align-items: center;
-        font-size: 1rem;
+      color: $copy;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      font-size: 1rem;
     }
 
     &__icons-container {
       display: flex;
       gap: 2rem;
+    }
+
+    &__hamburger--icon {
+      display: none;
     }
   }
 }
