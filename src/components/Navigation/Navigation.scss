@@ -2,3 +2,41 @@
 @use "../../assets/styles/partials/mixins" as *;
 @use "../../assets/styles/partials/globals" as *;
 @use "../../assets/styles/partials/variables" as *;
+
+.nav {
+
+  &__logo {
+    width: 2.5rem;
+  }
+
+  @include desktop {
+    height: 80px;
+    
+    &__wrapper {
+        width: 100%;
+      max-width: 1024px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    &__links-container {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__link {
+        color: $copy;
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    &__icons-container {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
