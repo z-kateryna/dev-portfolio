@@ -50,6 +50,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__icons-scroll">
+          {/* <p>Skills</p> */}
           <div className="hero__icons-track">
             {[...icons, ...icons].map((icon, index) => (
               <img

@@ -1,6 +1,7 @@
 import "./Homepage.scss";
 import Navigation from "../../components/Navigation/Navigation"
 import Hero from "../../components/Hero/Hero";
+import Content from "../../components/Content/Content";
 
 
 export default function Homepage() {
@@ -8,6 +9,7 @@ export default function Homepage() {
       <>
         <Navigation />
         <Hero />
+        <Content />
       </>
     );
   }

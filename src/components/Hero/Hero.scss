@@ -87,9 +87,15 @@
     line-height: 1.2;
   }
 
+  &__paragraph {
+    display: flex;
+    justify-content: center;
+  }
+
   &__copy--small {
-    margin-top: 1rem;
+    padding-top: 1rem;
     text-align: center;
+    max-width: 320px;
   }
 
   &__icons-scroll {
@@ -142,12 +148,11 @@
 
     &__paragraph {
       width: 100%;
-      display: flex;
       justify-content: flex-end;
     }
 
     &__copy--small {
-      margin-top: 1rem;
+      // margin-top: 1rem;
       text-align: left;
       width: 400px;
     }
@@ -169,11 +174,26 @@
     &__img {
       height: 4rem;
       width: auto;
-    }
+
+      &:hover {
+        animation: wiggle 0.5s ease-in-out;
+    }}
 
     &__gif-wrapper {
       height: 4rem;
       width: 8rem;
     }
+
+    &__copy--small {
+      margin: 0;
+    }
   }
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
 }
