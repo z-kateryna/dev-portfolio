@@ -29,7 +29,7 @@ export default function Content() {
             <div className="content__tag">GitHub</div>
           </div>
           <h2 className="content__header">
-            Custom React portfolio website designed and built from scratch
+            Custom React website
           </h2>
           <p className="content__copy">
             This high-performance front-end project blends clean design,
@@ -61,7 +61,7 @@ export default function Content() {
             <div className="content__tag">Express</div>
             <div className="content__tag">UI Design</div>
             <div className="content__tag">GitHub</div>
-            <div className="content__tag">Dynamic filters & search</div>
+            <div className="content__tag">Prompt engineering</div>
           </div>
           <h2 className="content__header">b.smart app</h2>
           <p className="content__copy">
