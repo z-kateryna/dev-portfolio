@@ -23,12 +23,12 @@ export default function Navigation() {
         </NavLink>
         <ul className="nav__links-container">
           <li>
-            <NavLink to="#" className="nav__link">
+            <NavLink to="/" className="nav__link">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="#" className="nav__link">
+            <NavLink to="/about" className="nav__link">
               About
             </NavLink>
           </li>
@@ -95,12 +95,12 @@ export default function Navigation() {
       >
         <ul className="nav__hamburger--links">
           <li className="nav__hamburger--item">
-            <NavLink to="#" className="nav__hamburger__link">
+            <NavLink to="/" className="nav__hamburger__link">
               Home
             </NavLink>
           </li>
           <li className="nav__hamburger--item">
-            <NavLink to="#" className="nav__hamburger__link">
+            <NavLink to="/about" className="nav__hamburger__link">
               About
             </NavLink>
           </li>
