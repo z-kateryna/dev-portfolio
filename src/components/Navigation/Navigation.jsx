@@ -7,7 +7,7 @@ import Git from "../../assets/icons/github.svg";
 import LinkdeIn from "../../assets/icons/linkedIn.svg";
 import Email from "../../assets/icons/email.svg";
 import HamburgerMenu from "../../assets/icons/hamburger.svg";
-import ArrowLight from "../../assets/icons/arrowlight.svg";
+import ArrowLight from "../../assets/icons/arrowuplight.svg";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,24 +33,34 @@ export default function Navigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="#" className="nav__link">
+             <a
+              className="nav__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href=" https://kzabrodska.netlify.app"
+            >
               UX/UI Design
               <img
                 src={Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink to="#" className="nav__link">
+            <a
+              className="nav__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+            >
               Resume
               <img
                 src={Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
-            </NavLink>
+            </a>
           </li>
         </ul>
         <ul className="nav__icons-container">
@@ -105,24 +115,34 @@ export default function Navigation() {
             </NavLink>
           </li>
           <li className="nav__hamburger--item">
-            <NavLink to="#" className="nav__hamburger__link">
+            <a
+              className="nav__hamburger__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href=" https://kzabrodska.netlify.app"
+            >
               UX/UI Design
               <img
-                src={ArrowLight}
+                src={Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
-            </NavLink>
+            </a>
           </li>
           <li className="nav__hamburger--item">
-            <NavLink to="#" className="nav__hamburger__link">
+            <a
+              className="nav__hamburger__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+            >
               Resume
               <img
-                src={ArrowLight}
+                src={Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
-            </NavLink>
+            </a>
           </li>
         </ul>
         <ul className="nav__hamburger__icons-container">

@@ -75,7 +75,6 @@
   }
 
   @include tablet {
-
     &__wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -92,16 +91,17 @@
   }
 
   @include desktop {
-
+    
     &__container {
-max-width: 1024px;
-margin: 0 auto;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0;
     }
 
     &__header {
       font-size: 2.5rem;
       text-align: left;
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
       font-weight: 600;
     }
 
@@ -116,6 +116,7 @@ margin: 0 auto;
       width: 48%;
       margin-bottom: 4rem;
       flex-direction: column;
+      padding-left: 0;
     }
 
     &__author {
