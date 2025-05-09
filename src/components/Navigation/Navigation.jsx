@@ -2,12 +2,12 @@ import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/icons/logo.svg";
-import Arrow from "../../assets/icons/arrow-up.svg";
+import Arrow from "../../assets/icons/arrowup.svg";
 import Git from "../../assets/icons/github.svg";
 import LinkdeIn from "../../assets/icons/linkedIn.svg";
 import Email from "../../assets/icons/email.svg";
 import HamburgerMenu from "../../assets/icons/hamburger.svg";
-import ArrowLight from "../../assets/icons/arrow-up-light.svg";
+import ArrowLight from "../../assets/icons/arrowlight.svg";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
