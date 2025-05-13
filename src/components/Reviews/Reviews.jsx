@@ -111,7 +111,7 @@ export default function Reviews() {
                 >
                   Jay Rana
                 </a>
-                &nbsp; Managing Deirector, CanDubai
+                &nbsp; Managing Director, CanDubai
               </p>
             </div>
           </div>
