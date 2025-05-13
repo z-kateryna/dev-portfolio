@@ -5,7 +5,7 @@
 
 .content {
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   &__wrapper {
     display: flex;
@@ -62,6 +62,7 @@
   }
 
   @include tablet {
+      margin-top: 2rem;
     &__wrapper {
       gap: 1rem;
     }

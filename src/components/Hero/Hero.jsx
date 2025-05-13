@@ -1,5 +1,5 @@
 import "./Hero.scss";
-import Portrait from "../../assets/images/image.svg";
+import Portrait from "../../assets/images/picture.png";
 import CatGif from "../../assets/gifs/cat.gif";
 import CatStill from "../../assets/images/cat.gif";
 import JS from "../../assets/icons/js.svg";
