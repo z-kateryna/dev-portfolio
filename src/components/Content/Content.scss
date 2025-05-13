@@ -26,10 +26,11 @@
     gap: 0.5rem;
     flex-wrap: wrap;
     margin: 1rem 0;
+    padding-bottom: 0.5rem;
   }
 
   &__tag {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.2rem 0.75rem;
     border: 1px solid $brand-green;
     border-radius: 25px;
@@ -45,6 +46,7 @@
 
   &__copy {
     margin-bottom: 2rem;
+    font-size: 1.15rem;
   }
 
   &__button {
