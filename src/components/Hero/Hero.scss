@@ -7,12 +7,15 @@
   padding: 1rem;
   width: 100%;
   margin-top: 5rem;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   &__wrapper {
     height: 80%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -101,7 +104,6 @@
 
   &__icons-scroll {
     overflow: hidden;
-
   }
 
   &__icons-track {
@@ -178,7 +180,8 @@
 
       &:hover {
         animation: wiggle 0.5s ease-in-out;
-    }}
+      }
+    }
 
     &__gif-wrapper {
       height: 4rem;
@@ -192,9 +195,19 @@
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  75% { transform: rotate(3deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
