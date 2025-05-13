@@ -20,6 +20,58 @@
     display: none;
   }
 
+  &__link {
+    color: $copy;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(0);
+
+    &:hover {
+      color: $dark-green !important;
+      font-weight: 700;
+      transform: translateY(-2px);
+    }
+
+    &--active {
+      color: $dark-green !important;
+      font-weight: 700;
+      border-bottom: 2px solid $dark-green;
+    }
+  }
+
+  &__link--icon {
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(0);
+
+    &:hover {
+      color: $dark-green !important;
+      font-weight: 700;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__hamburger__link {
+    color: $green-bkgrd;
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+
+    &--active {
+      color: $brand-green !important;
+      font-weight: 700;
+      background-color: $green-bkgrd;
+      padding: 1rem 0;
+      width: 100%;
+    }
+  }
+
   &__icons-container {
     display: none;
   }

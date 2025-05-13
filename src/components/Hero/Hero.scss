@@ -7,7 +7,7 @@
   padding: 1rem;
   width: 100%;
   margin-top: 5rem;
-  height: 80vh;
+  height: 65vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -31,14 +31,14 @@
 
   &__img {
     width: 4rem;
-    height: 2.25rem;
+    height: 2.5rem;
     object-fit: fill;
   }
 
   &__gif-wrapper {
     position: relative;
     width: 5rem;
-    height: 2.25rem;
+    height: 2.5rem;
     border-radius: 30px;
     overflow: hidden;
     cursor: pointer;
@@ -77,13 +77,13 @@
   }
 
   &__copy--black {
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: $copy;
     line-height: 1.2;
   }
 
   &__copy--green {
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: $brand-green;
     text-align: center;
     font-style: italic;
@@ -133,6 +133,7 @@
   }
 
   @include tablet {
+      height: 70vh;
     margin-top: 4rem;
 
     &__copy--black,
@@ -164,6 +165,7 @@
   @include desktop {
     margin-top: 6rem;
     height: 75vh;
+    
 
     &__wrapper {
       max-width: 1020px;

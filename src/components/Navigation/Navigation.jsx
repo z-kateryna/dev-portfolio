@@ -3,45 +3,62 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/icons/logo.svg";
 import Arrow from "../../assets/icons/arrow-up.svg";
+import ArrowDark from "../../assets/icons/arrow-dark.svg";
+import ArrowLight from "../../assets/icons/arrowuplight.svg";
 import Git from "../../assets/icons/github.svg";
 import LinkdeIn from "../../assets/icons/linkedIn.svg";
 import Email from "../../assets/icons/email.svg";
 import HamburgerMenu from "../../assets/icons/hamburger.svg";
-import ArrowLight from "../../assets/icons/arrowuplight.svg";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
+  const [hoveredHamburgerLink, setHoveredHamburgerLink] = useState(null);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
+
   return (
     <nav className="nav">
       <div className="nav__wrapper">
         <NavLink to="/" className="nav__logo">
           <img src={Logo} alt="KZ logo" />
         </NavLink>
+
         <ul className="nav__links-container">
           <li>
-            <NavLink to="/" className="nav__link">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav__link nav__link--active" : "nav__link"
+              }
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className="nav__link">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "nav__link nav__link--active" : "nav__link"
+              }
+            >
               About
             </NavLink>
           </li>
           <li>
-             <a
+            <a
               className="nav__link"
               target="_blank"
               rel="noopener noreferrer"
-              href=" https://kzabrodska.netlify.app"
+              href="https://kzabrodska.netlify.app"
+              onMouseEnter={() => setHoveredLink("design")}
+              onMouseLeave={() => setHoveredLink(null)}
             >
               UX/UI Design
               <img
-                src={Arrow}
+                src={hoveredLink === "design" ? ArrowDark : Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
@@ -52,17 +69,20 @@ export default function Navigation() {
               className="nav__link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW"
+              onMouseEnter={() => setHoveredLink("resume")}
+              onMouseLeave={() => setHoveredLink(null)}
             >
               Resume
               <img
-                src={Arrow}
+                src={hoveredLink === "resume" ? ArrowDark : Arrow}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
             </a>
           </li>
         </ul>
+
         <ul className="nav__icons-container">
           <li>
             <a
@@ -81,7 +101,7 @@ export default function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="nav__icon" src={LinkdeIn} alt="LinkdeIn icon" />
+              <img className="nav__icon" src={LinkdeIn} alt="LinkedIn icon" />
             </a>
           </li>
           <li>
@@ -93,6 +113,7 @@ export default function Navigation() {
             </a>
           </li>
         </ul>
+
         <img
           className="nav__hamburger--icon"
           src={HamburgerMenu}
@@ -100,51 +121,79 @@ export default function Navigation() {
           alt="hamburger menu icon"
         />
       </div>
+
       <div
         className={`nav__hamburger--container ${menuOpen ? "open" : "closed"}`}
       >
         <ul className="nav__hamburger--links">
           <li className="nav__hamburger--item">
-            <NavLink to="/" className="nav__hamburger__link">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav__hamburger__link nav__hamburger__link--active"
+                  : "nav__hamburger__link"
+              }
+            >
               Home
             </NavLink>
           </li>
           <li className="nav__hamburger--item">
-            <NavLink to="/about" className="nav__hamburger__link">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav__hamburger__link nav__hamburger__link--active"
+                  : "nav__hamburger__link"
+              }
+            >
               About
             </NavLink>
           </li>
-          <li className="nav__hamburger--item">
+          <li
+            className="nav__hamburger--item"
+            onMouseEnter={() => setHoveredHamburgerLink("design")}
+            onMouseLeave={() => setHoveredHamburgerLink(null)}
+          >
             <a
               className="nav__hamburger__link"
               target="_blank"
               rel="noopener noreferrer"
-              href=" https://kzabrodska.netlify.app"
+              href="https://kzabrodska.netlify.app"
             >
               UX/UI Design
               <img
-                src={ArrowLight}
+                src={
+                  hoveredHamburgerLink === "design" ? ArrowDark : ArrowLight
+                }
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
             </a>
           </li>
-          <li className="nav__hamburger--item">
+          <li
+            className="nav__hamburger--item"
+            onMouseEnter={() => setHoveredHamburgerLink("resume")}
+            onMouseLeave={() => setHoveredHamburgerLink(null)}
+          >
             <a
               className="nav__hamburger__link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+              href="https://docs.google.com/document/d/1rblVUZ6f4v9JpZd6YIBNR5zUAh2Z8cgW"
             >
               Resume
               <img
-                src={ArrowLight}
+                src={
+                  hoveredHamburgerLink === "resume" ? ArrowDark : ArrowLight
+                }
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
             </a>
           </li>
         </ul>
+
         <ul className="nav__hamburger__icons-container">
           <li>
             <a
@@ -163,7 +212,7 @@ export default function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="nav__icon" src={LinkdeIn} alt="LinkdeIn icon" />
+              <img className="nav__icon" src={LinkdeIn} alt="LinkedIn icon" />
             </a>
           </li>
           <li>
