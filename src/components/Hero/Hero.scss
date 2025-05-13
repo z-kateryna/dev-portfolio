@@ -7,14 +7,14 @@
   padding: 1rem;
   width: 100%;
   margin-top: 5rem;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
 
   &__wrapper {
-    // height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    justify-content: space-between;
   }
 
   &__copy--line1,
@@ -113,10 +113,6 @@
     &:hover {
       animation-play-state: paused;
     }
-  }
-
-  &__copy-container {
-    margin-bottom: 10rem;
   }
 
   &__icon {

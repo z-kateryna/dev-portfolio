@@ -2,7 +2,7 @@ import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/icons/logo.svg";
-import Arrow from "../../assets/icons/arrowup.svg";
+import Arrow from "../../assets/icons/arrow-up.svg";
 import Git from "../../assets/icons/github.svg";
 import LinkdeIn from "../../assets/icons/linkedIn.svg";
 import Email from "../../assets/icons/email.svg";
@@ -123,7 +123,7 @@ export default function Navigation() {
             >
               UX/UI Design
               <img
-                src={Arrow}
+                src={ArrowLight}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
@@ -138,7 +138,7 @@ export default function Navigation() {
             >
               Resume
               <img
-                src={Arrow}
+                src={ArrowLight}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
