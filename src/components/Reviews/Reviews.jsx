@@ -56,7 +56,7 @@ export default function Reviews() {
                 >
                   Elena Pshegorskaya
                 </a>
-                &nbsp; Osvita Tour Director
+                &nbsp; Director, Osvita Tour
               </p>
             </div>
             <div className="comments__comment">

@@ -34,11 +34,13 @@ export default function Hero() {
               <img className="cat-still" src={CatStill} alt="static cat" />
               <img className="cat-animated" src={CatGif} alt="animated cat" />
             </div>
-            <p className="hero__copy--green"> creative developer,</p>
+            <p className="hero__copy--green">creative&nbsp;</p>
+            <p className="hero__copy--green">developer,&nbsp;</p>
+                        <p className="hero__copy--green-mobile"> designer</p>
           </div>
 
           <div className="hero__copy--line3">
-            <p className="hero__copy--green">designer</p>
+            <p className="hero__copy--green-desktop">designer&nbsp;</p>
             <p className="hero__copy--black">& lifelong learner</p>
           </div>
           <div className="hero__paragraph">

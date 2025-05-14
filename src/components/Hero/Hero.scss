@@ -25,26 +25,28 @@
   &__copy--line2,
   &__copy--line3 {
     display: flex;
-    gap: 0.75rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   &__img {
-    width: 4rem;
-    height: 2.5rem;
+    width: 5rem;
+    height: 2.9rem;
     border-radius: 30px;
     overflow: hidden;
     object-fit: cover;
+    margin-left: 1rem;
   }
 
   &__gif-wrapper {
     position: relative;
-    width: 5rem;
-    height: 2.5rem;
+    width: 6rem;
+    height: 2.9rem;
     border-radius: 30px;
     overflow: hidden;
     cursor: pointer;
+    margin-right: 1rem;
 
     .cat-still,
     .cat-animated {
@@ -80,29 +82,34 @@
   }
 
   &__copy--black {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $copy;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 500;
   }
 
-  &__copy--green {
-    font-size: 2rem;
-    color: $brand-green;
+  &__copy--green,
+  &__copy--green-mobile {
+    font-size: 2.5rem;
+    color: $brand-green!important;
     text-align: center;
     font-style: italic;
     line-height: 1.2;
-        font-weight: 400;
+    font-weight: 500;
+  }
+
+  &__copy--green-desktop {
+    display: none;
   }
 
   &__paragraph {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   &__copy--small {
-    padding-top: 1rem;
-    text-align: center;
+    padding: 1rem 0;
+    text-align: left;
     max-width: 320px;
     font-size: 1.15rem;
   }
@@ -138,12 +145,31 @@
   }
 
   @include tablet {
-      height: 70vh;
+    height: 70vh;
     margin-top: 4rem;
+
+    &__copy--line1,
+    &__copy--line2,
+    &__copy--line3 {
+      justify-content: center;
+    }
+
+    &__copy--green-mobile {
+      display: none;
+    }
+    &__copy--green-desktop {
+            font-size: 3.25rem;
+      display: block;
+      color: $brand-green;
+      text-align: center;
+      font-style: italic;
+      line-height: 1.2;
+      font-weight: 500;
+    }
 
     &__copy--black,
     &__copy--green {
-      font-size: 3rem;
+      font-size: 3.25rem;
     }
 
     &__img {
@@ -170,15 +196,15 @@
   @include desktop {
     margin-top: 6rem;
     height: 75vh;
-    
 
     &__wrapper {
       max-width: 1020px;
       margin: 0 auto;
     }
     &__copy--black,
-    &__copy--green {
-      font-size: 4rem;
+    &__copy--green,
+    &__copy--green-desktop {
+      font-size: 3.75rem;
     }
 
     &__img {
