@@ -5,6 +5,8 @@ import MockupInstock from "../../assets/images/mockupinstock.jpg";
 import MockUpCandubai from "../../assets/images/mockupcandubai.jpg";
 import MockUpBandsite from "../../assets/images/mockupbandsite.jpg";
 import MockUpOsvitaTour from "../../assets/images/mockuposvitatour.jpg";
+import MockUpRilel from "../../assets/images/mockuprilel.jpg";
+import MockUpMicrosoft from "../../assets/images/mockupmicrosoft.jpg";
 
 export default function Content() {
   return (
@@ -28,9 +30,7 @@ export default function Content() {
             <div className="content__tag">Netlify</div>
             <div className="content__tag">GitHub</div>
           </div>
-          <h2 className="content__header">
-            Custom React website
-          </h2>
+          <h2 className="content__header">Custom React website</h2>
           <p className="content__copy">
             This high-performance front-end project blends clean design,
             responsive development, and intuitive user experience. Built with
@@ -193,6 +193,65 @@ export default function Content() {
           </p>
           <a
             href="https://drive.google.com/file/d/1GKP7JrQAiZ3U_qR1ricPlBDNiiWJHSdN/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="content__button"
+          >
+            See demo
+          </a>
+        </div>
+        <div className="content__card">
+          <img
+            className="content__img"
+            src={MockUpRilel}
+            alt="mock up of agustincalderon.com"
+          />
+          <div className="content__tags-container">
+            <div className="content__tag">Wordpress Development</div>
+            <div className="content__tag">Website</div>
+            <div className="content__tag">Elementor</div>
+            <div className="content__tag">UI/UX Design</div>
+            <div className="content__tag">Graphic Design</div>
+          </div>
+          <h2 className="content__header">Digital marketing agency website</h2>
+          <p className="content__copy">
+            From logo to layout, I crafted this WordPress site for a digital
+            marketing agency — blending bold visuals with clean, user-friendly
+            design in Elementor.
+          </p>
+          <a
+            href="https://rilel.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="content__button"
+          >
+            See live site
+          </a>
+        </div>
+        <div className="content__card">
+          <img
+            className="content__img"
+            src={MockUpMicrosoft}
+            alt="mock up of agustincalderon.com"
+          />
+          <div className="content__tags-container">
+            <div className="content__tag">24-Hour Hackathon</div>
+            <div className="content__tag">AI</div>
+            <div className="content__tag">OpenAI API</div>
+            <div className="content__tag">Full Stack</div>
+            <div className="content__tag">Website</div>
+          </div>
+          <h2 className="content__header">
+            Microsoft Industry Project
+          </h2>
+          <p className="content__copy">
+            Led a team brainstorming session to shape an AI-powered tool for
+            small business owners using Microsoft products. I designed a
+            brand-aligned mockup and led front-end development implementation,
+            focusing on making AI more accessible and user-friendly.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1TiRzQfHMU_NG5v6uJvBfg6BY8HXfxc8g/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="content__button"

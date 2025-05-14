@@ -91,7 +91,7 @@
   &__copy--green,
   &__copy--green-mobile {
     font-size: 2.5rem;
-    color: $brand-green!important;
+    color: $brand-green !important;
     text-align: center;
     font-style: italic;
     line-height: 1.2;
@@ -158,7 +158,7 @@
       display: none;
     }
     &__copy--green-desktop {
-            font-size: 3.25rem;
+      font-size: 3.25rem;
       display: block;
       color: $brand-green;
       text-align: center;
@@ -187,7 +187,7 @@
     }
 
     &__copy--small {
-      // margin-top: 1rem;
+      margin-right: 4rem;
       text-align: left;
       width: 400px;
     }
