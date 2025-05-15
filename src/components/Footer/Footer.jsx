@@ -10,14 +10,27 @@ export default function Footer() {
       <div className="footer__wrapper">
         <div className="footer__icons--wrapper">
           <div className="footer__icons--container">
-            <a className="footer__icon" href="#">
+            <a
+              className="footer__icon"
+              href="https://github.com/z-kateryna"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={github} alt="github icon" />
             </a>
-            <a className="footer__icon" href="#">
-              <img src={linkedin} alt="github icon" />
+            <a
+              className="footer__icon"
+              href="https://www.linkedin.com/in/kzabrodska"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="linkedin icon" />
             </a>
-            <a className="footer__icon" href="#">
-              <img src={mail} alt="github icon" />
+            <a
+              className="footer__icon"
+              href="mailto:zabrodskakateryna@gmail.com"
+            >
+              <img src={mail} alt="email icon" />
             </a>
           </div>
           <button

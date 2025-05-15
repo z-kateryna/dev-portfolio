@@ -4,19 +4,18 @@
 @use "../../assets/styles/partials/variables" as *;
 
 .footer {
+  &__wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__wrapper {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__icons--wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 4rem;
-        padding-bottom: 1rem;
-    }
+  &__icons--wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
 
   &__copy {
     font-size: 1rem;
@@ -44,12 +43,12 @@
   }
 
   @include desktop {
-&__wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding-top: 2rem;
-}
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding-top: 2rem;
+    }
 
     &__icons--container {
       display: flex;
