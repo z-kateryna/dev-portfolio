@@ -6,6 +6,7 @@
 .content {
   padding: 1rem;
   margin-top: 1rem;
+  
 
   &__wrapper {
     display: flex;
@@ -92,12 +93,6 @@
 
     &__img {
       height: 20rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-      &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      }
     }
   }
 }

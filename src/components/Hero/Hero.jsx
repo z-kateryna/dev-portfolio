@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import { useState } from "react";
 import Portrait from "../../assets/images/picture.png";
 import CatGif from "../../assets/gifs/cat.gif";
 import CatStill from "../../assets/images/cat.gif";
@@ -15,7 +16,13 @@ import Mysql from "../../assets/icons/mysql.svg";
 
 const icons = [JS, CSS, HTML, Tailwind, Sass, VS, Postman, Adobe, Figma, Mysql];
 
-export default function Hero() {
+export default function Hero({ onContinue }) {
+  const [isGifPlaying, setIsGifPlaying] = useState(true);
+
+  const handleCatClick = () => {
+    setIsGifPlaying((prev) => !prev);
+  };
+
   return (
     <section className="hero">
       <div className="hero__wrapper">
@@ -30,13 +37,16 @@ export default function Hero() {
           </div>
 
           <div className="hero__copy--line2">
-            <div className="hero__gif-wrapper">
-              <img className="cat-still" src={CatStill} alt="static cat" />
-              <img className="cat-animated" src={CatGif} alt="animated cat" />
+            <div className="hero__gif-wrapper" onClick={handleCatClick}>
+              <img
+                className="hero__img--cat"
+                src={isGifPlaying ? CatGif : CatStill}
+                alt="cat"
+              />
             </div>
             <p className="hero__copy--green">creative&nbsp;</p>
             <p className="hero__copy--green">developer,&nbsp;</p>
-                        <p className="hero__copy--green-mobile"> designer</p>
+            <p className="hero__copy--green-mobile"> designer</p>
           </div>
 
           <div className="hero__copy--line3">
@@ -44,10 +54,10 @@ export default function Hero() {
             <p className="hero__copy--black">& lifelong learner</p>
           </div>
           <div className="hero__paragraph">
-          <p className="hero__copy--small">
-            I obsess over details, care deeply about user experience, and love
-            turning ideas into beautiful, useful, and usable products.
-          </p>
+            <p className="hero__copy--small">
+              I obsess over details, care deeply about user experience, and love
+              turning ideas into beautiful, useful, and usable products.
+            </p>
           </div>
         </div>
 
