@@ -115,6 +115,7 @@
 
   &__hamburger--icon {
     width: 2.4rem;
+    max-height: 24px;
   }
 
   @include desktop {

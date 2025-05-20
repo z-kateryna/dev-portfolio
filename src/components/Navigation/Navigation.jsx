@@ -9,6 +9,7 @@ import Git from "../../assets/icons/github.svg";
 import LinkdeIn from "../../assets/icons/linkedIn.svg";
 import Email from "../../assets/icons/email.svg";
 import HamburgerMenu from "../../assets/icons/hamburger.svg";
+import CloseIcon from "../../assets/icons/close.svg";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Navigation() {
               className="nav__link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://kzabrodska.netlify.app"
+              href="https://kzabrodska.com"
               onMouseEnter={() => setHoveredLink("design")}
               onMouseLeave={() => setHoveredLink(null)}
             >
@@ -116,9 +117,10 @@ export default function Navigation() {
 
         <img
           className="nav__hamburger--icon"
-          src={HamburgerMenu}
+          src={menuOpen ? CloseIcon : HamburgerMenu}
+          alt={menuOpen ? "close menu icon" : "open menu icon"}
           onClick={toggleMenu}
-          alt="hamburger menu icon"
+          aria-expanded={menuOpen}
         />
       </div>
 
@@ -159,13 +161,11 @@ export default function Navigation() {
               className="nav__hamburger__link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://kzabrodska.netlify.app"
+              href="https://kzabrodska.com"
             >
               UX/UI Design
               <img
-                src={
-                  hoveredHamburgerLink === "design" ? ArrowDark : ArrowLight
-                }
+                src={hoveredHamburgerLink === "design" ? ArrowDark : ArrowLight}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
@@ -184,9 +184,7 @@ export default function Navigation() {
             >
               Resume
               <img
-                src={
-                  hoveredHamburgerLink === "resume" ? ArrowDark : ArrowLight
-                }
+                src={hoveredHamburgerLink === "resume" ? ArrowDark : ArrowLight}
                 alt="arrow up icon"
                 className="nav__link--icon"
               />
